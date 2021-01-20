@@ -1,11 +1,6 @@
-// import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from 'react-router-dom';
+
 
 const Section = styled.div`
     width:100%;
@@ -62,7 +57,7 @@ const LoginPage= ()=>{
     
     const handleClick = ()=>{
 
-        console.log('begin');
+        // console.log('begin');
         
         // 取得graphql API 內容(帳號 + 密碼) 
         const url ='https://numet-gaming-mgmt.herokuapp.com/graphql';
@@ -80,7 +75,7 @@ const LoginPage= ()=>{
         const options = {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ query: login })
+            body: JSON.stringify({ query: login }) 
         };
         
         fetch(url,options)
@@ -92,7 +87,7 @@ const LoginPage= ()=>{
             .then((data)=> console.log('data', data))
             .catch((error)=> console.log('fetch error'))
             
-        console.log('end');
+        // console.log('end');
 
         // 確認帳號密碼是否正確 >>>這個只能由後端依據token做確認
         // 正確 >>> 進入下一頁

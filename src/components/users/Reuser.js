@@ -1,13 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import {  Table, Button, Spin } from 'antd';
 import '../../App.css';
-import {
-  BrowserRouter as Router,
-  // Switch,
-  // Route,
-  Link,
-} from 'react-router-dom';
-// import LoginPage from '../login/Login'
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
@@ -62,6 +56,7 @@ const Reuser = ()=>{
       fetch('http://jsonplaceholder.typicode.com/users')
       .then((response)=>response.json())
       // (2)成功拿到回傳資料，執行setData()方法:取得回傳所有的資料，由dataIndex去辨認要顯示哪些內容，更新內容。
+      // (2-1)更新完畫面後，執行setSpinning()方法:spinning消失
       .then(
         (printData)=> {
           console.log(printData);
@@ -83,14 +78,14 @@ const Reuser = ()=>{
 
 
     return (
-      <Router>
+
         <div style={{ marginBottom: 16 , padding: 16}}>
             {console.log('Final in return useEffect!')}
             
             <Link to="/login">
-              {/* <Button type="primary" style={{ marginLeft: 16, marginTop:16 }}> */}
+              <Button type="primary" style={{ marginLeft: 16, marginTop:16 }}>
                   回上一頁
-              {/* </Button> */}
+              </Button>
             </Link>
 
             <Button type="danger" style={{ marginLeft: 16, marginTop:16 }} onClick={handleRefresh} >
@@ -101,7 +96,7 @@ const Reuser = ()=>{
               <Table columns={columns} dataSource={data} />
             </Spin>
         </div>
-      </Router>
+
     );
 
 };

@@ -1,5 +1,6 @@
 import LoginPage from './components/login/Login';
 import Reuser from "./components/users/Reuser";
+import LineChart from "./components/lineGraph/Line"
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,12 +10,15 @@ import {
 
 function App() {
   return (
+    <>
+    <LineChart />
     <Router>
-      <Switch>
+      <Switch> 
         <Route path='/login' component={LoginPage} />
-        <Route exact path='/user' component={Reuser} />  
+        <Route path='/user' component={Reuser} />  
       </Switch>
     </Router>
+    </>
   );
 }
 
