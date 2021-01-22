@@ -39,6 +39,7 @@ const options = {
       {
         ticks: {
           beginAtZero: true,
+          precision: 0,
         },
       },
     ],
