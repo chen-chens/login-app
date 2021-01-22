@@ -18,14 +18,14 @@ const data = {
   datasets: [
     {
       label: '一般會員',
-      data: [12, 19, 3, 5, 2, 3], //輸入統計數量
+      data: [12, 19, 3, 5, 2, 3], //輸入一般會員統計數量
       fill: false,
       backgroundColor: 'rgb(47, 113, 115)',
       borderColor: 'rgba(62, 149, 205)',
     },
     {
         label: 'VIP會員',
-        data: [1, 2, 1, 1, 2, 2], //輸入統計數量
+        data: [1, 2, 1, 1, 2, 2], //輸入VIP會員統計數量
         fill: false,
         backgroundColor: 'rgb(142, 94, 162)',
         borderColor: 'rgba(115, 78, 130)',
