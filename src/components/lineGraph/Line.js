@@ -14,18 +14,18 @@ const Title = styled.h1`
 
 
 const data = {
-  labels: ['1', '2', '3', '4', '5', '6'], //輸入篩選日期
+  labels: ['1', '2', '3', '4', '5', '6'], //輸入:篩選日期
   datasets: [
     {
       label: '一般會員',
-      data: [12, 19, 3, 5, 2, 3], //輸入統計數量
+      data: [12, 19, 3, 5, 2, 3], //輸入:統計數量
       fill: false,
       backgroundColor: 'rgb(47, 113, 115)',
       borderColor: 'rgba(62, 149, 205)',
     },
     {
         label: 'VIP會員',
-        data: [1, 2, 1, 1, 2, 2], //輸入統計數量
+        data: [1, 2, 1, 1, 2, 2], //輸入:統計數量
         fill: false,
         backgroundColor: 'rgb(142, 94, 162)',
         borderColor: 'rgba(115, 78, 130)',
